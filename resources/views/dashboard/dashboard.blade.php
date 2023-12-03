@@ -4,6 +4,11 @@
 @endsection
 @section('container')
 	{{--  alert untuk menunjukkan bahwa berhasil login  --}}
+	@if ($message = Session::get('message'))
+		<script>
+			alert('{{ $message }}')
+		</script>
+	@endif
 	@if ($message = Session::get('success'))
 		<script>
 			alert('{{ $message }}')
@@ -108,7 +113,7 @@
 	<hr class="mb-5">
 	<div class="container service text-center mt-5 d-flex align-items-center flex-column p-1" id="services">
 		<h3 class="mb-5">
-			<strong>What Can I Do?</strong>
+			<strong>What Can I Do</strong>
 		</h3>
 		<div class="row row-cols-2 row-cols-lg-3 g-2">
 			<div class="col">
@@ -179,7 +184,35 @@
 			</div>
 		</div>
 	</div>
-	{{--  Service section  end --}}
+	{{--  service section end  --}}
+	{{--  About section start  --}}
+	<div class="row row-cols-3 row-cols-lg-3 g-2" id="about">
+		<div class="col">
+			<div class="card border-2 p-4" style="border-color: black !important; color:black;">
+				<h5>
+					My name is Fadhil, I’m a student of Software Engineering in UGM. I have experienced in graphic design and UI/UX design for 4 years.
+				</h5>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card border-2 p-4" style="border-color: black !important; color:black;">
+				<h5>
+					My name is Fadhil, I’m a student of Software Engineering in UGM. I have experienced in graphic design and UI/UX design for 4 years.
+				</h5>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card border-2 p-4" style="border-color: black !important; color:black;">
+				<h5>
+					My name is Fadhil, I’m a student of Software Engineering in UGM. I have experienced in graphic design and UI/UX design for 4 years.
+				</h5>
+			</div>
+		</div>
+
+	</div>
+	{{--  About section end  --}}
+	
+	
 
 	
 	
